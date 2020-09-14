@@ -6,12 +6,11 @@
 */
 
 echo '
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <title>抖音无水印解析-闲着没事写的！</title>
+    <title>抖音解析—去水印-闲着没事写的！</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link type="text/css" rel="styleSheet"  href="css.css" />
     <form action="index.php" method="POST">
-    <input type="text" name="url" placeholder="直接复制分享链接扔给我，不用管格式( •̀ ω •́ )✧">
+    <input type="text" name="url" placeholder="直接复制分享链接扔给我">
     <input type="submit" value="Fuck it！">
     <br/>
     <br/>
@@ -103,8 +102,8 @@ if (empty($url)){
 }elseif (strstr($url, douyin)) {
     $share_url = get_share_url($url);
     echo '
-    <p>解析完成，点击下方按钮进行下载无水印视频或封面o(*￣▽￣*)o</p><p>没成功的话再试一次哦o(*￣▽￣*)o<p><br/><br/><br/><a target="_blank" rel="noreferrer" href="'.get_302_url(get_video_url(get_url1(get_url($share_url)))).'">视频下载地址</a><br/><br/><a target="_blank" rel="noreferrer" href="'.get_image_url(get_url($share_url)).'">封面下载地址</a>';
+    <p>解析完成，点击下方按钮进行下载无水印视频或封面</p><br/><br/><br/><a target="_blank" rel="noreferrer" href="'.get_302_url(get_video_url(get_url1(get_url($share_url)))).'">视频下载地址</a><br/><br/><a target="_blank" rel="noreferrer" href="'.get_image_url(get_url($share_url)).'">封面下载地址</a>';
 }else{
-    echo '<p align="center" style="font-size:20px">链接可能输错了，再试试( ఠൠఠ )ﾉ</p>';
+    echo '<p align="center" style="font-size:20px">链接可能输错了，再试试</p>';
 }
 
